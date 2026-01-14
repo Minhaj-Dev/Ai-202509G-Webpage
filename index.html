@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+<script>
+ let productDetails = [
+  { title: "Mobile Phone", price: "4000", details: "Dummy Details", sale: "20%" ,img:"assets/hero-img.jpg" },
+  { title: "Samsung Galaxy", price: "25000", details: "Android Smartphone", sale: "10%",img:"assets/product1.jpg" },
+  { title: "iPhone", price: "80000", details: "iOS Smartphone", sale: "5%" ,img:"assets/product1.jpg"},
+  { title: "Oppo Mobile", price: "18000", details: "Camera Phone", sale: "15%" ,img:"assets/product1.jpg"},
+  { title: "Xiaomi Redmi", price: "22000", details: "Budget Smartphone", sale: "12%",  img:"assets/product1.jpg"},
+  { title: "MinhajPhone", price: "10000000000", details: "High-end Phone", sale: "0%", img:"assets/product1.jpg" }
+];
+
+
+
+
+</script>
+
+  <body>
+    <div class="navbar" >
+      <div class="links" >
+        <a href="">Home</a>
+        <a href="">About</a>
+        <a href="">Contact</a>
+        <a href="#products">Products</a>
+        <a href="">Feedback</a>
+      </div>
+
+      <div class="menu">|||</div>
+    </div>
+
+    <div class="hero-section" id="top">
+        <h1>Welcome To my webpage</h1>
+    </div>
+
+    <h1>New arrival</h1>
+
+
+    <div class="parentOfCards" id="products">
+      
+        
+
+
+
+
+
+
+    </div>
+
+    <div class="footer">
+     <div class="child1">
+      <h3>Products </h3>
+      <ul>
+        <li>list item 1</li>
+        <li>list item 2</li>
+        <li>list item 3</li>
+        <li>list item 4</li>
+      </ul>
+     </div>
+     <div class="child2">
+      <h3>Account</h3>
+      <ul>
+        <li>list item 1</li>
+        <li>list item 2</li>
+        <li>list item 3</li>
+        <li>list item 4</li>
+      </ul>
+     </div>
+     <div class="child3">
+      <h3>Corporate</h3>
+      <ul>
+        <li>list item 1</li>
+        <li>list item 2</li>
+        <li>list item 3</li>
+        <li>list item 4</li>
+      </ul>
+     </div>
+     <div class="child4">
+      <h3>Contact</h3>
+      <ul>
+        <li>list item 1</li>
+        <li>list item 2</li>
+        <li>list item 3</li>
+        <li>list item 4</li>
+      </ul>
+     </div>
+    </div>
+
+    <div class="backtoTop">
+      <a href="#top">&uarr;</a>
+    </div>
+  </body>
+
+  <script>
+
+    for(var i = 0;i<productDetails.length;i++){
+      document.getElementById("products").innerHTML+=`
+      <div class="card">
+            <img src="${productDetails[i].img}" alt="">
+            <h2>${productDetails[i].title}</h2>
+            <h3>Rs.${productDetails[i].price}</h3>
+            <p>${productDetails[i].details}</p>
+
+            <div class="btngroup">
+              <button>Add to cart</button>
+              <button>View Details &rarr;</button>
+            </div>
+            <div class="sale">
+              <span>${productDetails[i].sale} OFF</span>
+            </div>
+        </div>
+
+      `
+    }
+
+  </script>
+</html>
